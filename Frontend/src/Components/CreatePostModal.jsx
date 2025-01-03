@@ -48,7 +48,7 @@ function CreatePostModal({openPostModal,setOpenPostModal,closemodal}) {
         
         try{
           setLoader(true);
-          const res = await axios.post('http://localhost:1000/api/v1/posts/addPost', formData, {headers:{"Content-Type":'multipart/form-data'}, withCredentials:true})
+          const res = await axios.post('https://luka-social-media-application.onrender.com/api/v1/posts/addPost', formData, {headers:{"Content-Type":'multipart/form-data'}, withCredentials:true})
           if(res.data.success){
             dispatch(setPosts([res.data.newpost,...posts]))
             setOpenPostModal(false); // iske chalte toastify nhi aa rha hai Bc isko hata denge toh aa jayege toast

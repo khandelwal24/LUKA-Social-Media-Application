@@ -24,7 +24,7 @@ function App() {
 
   useEffect(()=>{
     if(user){
-      const sockio = io('http://localhost:1000',{ query:{userId:user?._id}, transports:['websocket'] });
+      const sockio = io('https://luka-social-media-application.onrender.com',{ query:{userId:user?._id}, transports:['websocket'] });
       // to stop un-necessary api calls we add transposts:'websocket'
       dispatch(setSocket(sockio));
 

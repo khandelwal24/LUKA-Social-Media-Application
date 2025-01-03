@@ -12,7 +12,7 @@ const UseGetUserProfile = (userId) => {
     useEffect( () => {
         const fetchUserProfile = async () =>{
             try{
-                const res = await axios.get(`http://localhost:1000/api/v1/user/${userId}/profile`, {withCredentials:true})
+                const res = await axios.get(`https://luka-social-media-application.onrender.com/api/v1/user/${userId}/profile`, {withCredentials:true})
                 if(res.data.success){
                     // console.log('Custom hook ka data',res.data);
                     dispatch(setuserProfile(res.data?.user))
