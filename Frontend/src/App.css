@@ -1,0 +1,10 @@
+body::-webkit-scrollbar{
+    display: none;
+}
+#KK::-webkit-scrollbar{
+    display: none;
+}
+
+.red{
+    color: red;
+}
