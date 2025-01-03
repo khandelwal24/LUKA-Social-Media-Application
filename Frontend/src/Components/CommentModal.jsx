@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { IoMdClose } from "react-icons/io";
 import { BsThreeDots } from "react-icons/bs";
-import logo from '../assets/logo.png'
+// import logo from '../assets/logo.png'
 import DoubleCommentModal from './DoubleCommentModal';
 import { useDispatch, useSelector } from 'react-redux';
 import store from '../Redux/Store';

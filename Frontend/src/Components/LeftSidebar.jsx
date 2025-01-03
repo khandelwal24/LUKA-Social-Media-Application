@@ -8,7 +8,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineLibraryAdd } from "react-icons/md";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { TbLogout2 } from "react-icons/tb";
-import logo from '../assets/logo.png'
+// import logo from '../assets/logo.png'
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
