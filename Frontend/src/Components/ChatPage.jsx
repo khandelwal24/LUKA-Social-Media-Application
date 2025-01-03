@@ -18,7 +18,7 @@ function ChatPage() {
    
     // console.log('ChatPage Wala Messages : ',messages);
     // console.log("ChatPage Wala Online User : ",onlineUsers);
-    // console.log('ChatPage Wala Selected User :',SelectedUser?._id)
+    // console.log('ChatPage Wala Selected User :',SelectedUser?._id);
 
     const dispatch = useDispatch();
 
@@ -111,7 +111,7 @@ function ChatPage() {
            </div>
 
 
-           <div className='flex absolute bottom-0 w-full'>
+           <div className='flex absolute md:bottom-0 bottom-2 w-full'>
             <input value={textMessage} onChange={(e)=>settextMessage(e.target.value)} type='text' placeholder='Enter your messages...' className='p-2.5 text-sm outline-none w-full'></input>
             <button onClick={sendMessageHandler} className='text-sm text-center bg-blue-500 text-white font-semibold hover:bg-blue-600  p-1.5'>Send</button>
            </div>
