@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import { Navigate, NavLink, useLocation, useNavigate } from 'react-router-dom'
-import logo from '../assets/logo.png'
+// import logo from '../assets/logo.png'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import { FaEyeSlash } from "react-icons/fa";
