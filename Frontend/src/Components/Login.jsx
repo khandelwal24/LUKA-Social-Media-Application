@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { Navigate, NavLink, useLocation, useNavigate } from 'react-router-dom'
-// import logo from '../assets/logo.png'
+import logo from '/Logo.png'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import { FaEyeSlash } from "react-icons/fa";
@@ -78,7 +78,7 @@ function Login() {
         theme="dark"
         />
       <div className='w-full p-5 my-3'>
-          {/* <img src={logo} width={100} className='mx-auto animate-bounce'/> */}
+          <img src={logo} width={100} className='mx-auto animate-bounce'/>
       <form onSubmit={handleSubmit} className='max-w-[400px] mx-auto p-4 bg-gray-300 border border-black rounded-md shadow-xl overflow-hidden'>
           <p className='text-center text-3xl font-bold '> {/* <img src={logo} width={80} className='mx-auto'/> */} LUKA</p>
           <p className='sm:text-md text-sm text-center mb-4'>Login to see Photos & Videos of Your friends</p>

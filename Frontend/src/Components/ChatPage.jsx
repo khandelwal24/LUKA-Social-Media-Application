@@ -111,7 +111,7 @@ function ChatPage() {
            </div>
 
 
-           <div className='flex absolute md:bottom-0 bottom-2 w-full'>
+           <div className='flex absolute md:bottom-0 bottom-2 w-full my-5'>
             <input value={textMessage} onChange={(e)=>settextMessage(e.target.value)} type='text' placeholder='Enter your messages...' className='p-2.5 text-sm outline-none w-full'></input>
             <button onClick={sendMessageHandler} className='text-sm text-center bg-blue-500 text-white font-semibold hover:bg-blue-600  p-1.5'>Send</button>
            </div>

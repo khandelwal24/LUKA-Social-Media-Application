@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { IoMdClose } from "react-icons/io";
 import { BsThreeDots } from "react-icons/bs";
-// import logo from '../assets/logo.png'
+import logo from '/Logo.png'
 
 function DoubleCommentModal({closemode}) {
     const modalRef = useRef();

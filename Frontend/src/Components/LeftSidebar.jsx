@@ -8,7 +8,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineLibraryAdd } from "react-icons/md";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { TbLogout2 } from "react-icons/tb";
-// import logo from '../assets/logo.png'
+import logo from '/Logo.png'
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -95,7 +95,7 @@ function LeftSidebar() {
     <div className='h-screen top-0 fixed z-10 sm:w-[20%] bg-gray-300 border-r border-black shadow-xl px-2 mr-3 '>
     
     <div className='flex items-center text-center mx-auto'>
-    {/* <img src={logo} width={50}/> */}
+    <img src={logo} width={50}/>
     <span className='font-bold text-3xl text-center my-3 px-3 hidden md:block'>LUKA</span> 
     </div>
 
