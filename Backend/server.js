@@ -44,9 +44,7 @@ app.get('*',(_,res)=>{
 })
 
 
-
-
-mongoose.connect(process.env.MongoUrl,{dbName:'Insta_Clone_2'}).then(()=>console.log('MongoDB connected')).catch(()=>console.log('Errro Occured'));
+mongoose.connect(process.env.MongoUrl,{dbName:'Insta_Clone'}).then(()=>console.log('MongoDB connected')).catch(()=>console.log('Errro Occured'));
 
 const port = process.env.PORT || 8000;
 server.listen(port,()=>console.log(`Server is Running on port ${port}`));
