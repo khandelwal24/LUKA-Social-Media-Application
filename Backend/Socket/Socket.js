@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server,{
     cors:{
-        origin:'https://luka-social-media-application-1.onrender.com',
+        origin:'https://luka-frontend-htpi.onrender.com',
         credentials:true,
         methods:["GET","POST"],
     }
