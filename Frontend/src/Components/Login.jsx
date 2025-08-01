@@ -43,7 +43,7 @@ function Login() {
         // console.log(userInfo);
         try{
             setLoader(true);
-            const res = await axios.post('https://luka-social-media-application.onrender.com/api/v1/user/login',userInfo, {headers:{"Content-Type":'application/json'}, withCredentials:true });
+            const res = await axios.post('http://localhost:1000/api/v1/user/login',userInfo, {headers:{"Content-Type":'application/json'}, withCredentials:true });
 
             if(res?.data?.success){
                 dispatch(setAuthUser(res?.data?.rsp)) // Redux se aaya hai...

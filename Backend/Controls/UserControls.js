@@ -9,7 +9,6 @@ import { isAuthenticate } from '../Middlewares/auth.js'
 import cloudinary from '../Utils/CloudinaryP.js'
 
 
-
 export const Register = async(req,res)=>{
     try{
         const {username,email,password} = req.body;
@@ -32,7 +31,6 @@ export const Login = async(req,res)=>{
         if(!email || !password) return res.status(401).json({message:'Please fill all the feilds',success:false});
         let rsp = await User_Model.findOne({email});
         if(!rsp) return res.status(401).json({message:'Invalid Email Id', success:false});
-        
         const validate = await bcrypt.compare(password,rsp.password);
         if(!validate) return res.status(401).json({message:'Invalide Password',success:false});
 
@@ -66,9 +64,8 @@ export const Login = async(req,res)=>{
 
         // rsp.posts = populatedPost;
 
-
         // for cookie("cookieName","Value","Options")
-        
+
         res.cookie("RCookie",token,options).status(200).json({message:`User Logged in Successfully - Welcome back ${rsp.username}`,success:true,rsp})
     }
     catch(error){

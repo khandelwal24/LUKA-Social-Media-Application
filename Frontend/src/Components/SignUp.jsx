@@ -38,7 +38,7 @@ function SignUp() {
         // console.log(userInfo);
         try{
             setLoading(true);
-            const res = await axios.post('https://luka-social-media-application.onrender.com/api/v1/user/register',userInfo, {headers:{"Content-Type":'application/json'}, withCredentials:true });
+            const res = await axios.post('http://localhost:1000/api/v1/user/register',userInfo, {headers:{"Content-Type":'application/json'}, withCredentials:true });
             if(res.data.success){
                 toast.success(res.data.message);
                 setUsrInfo({

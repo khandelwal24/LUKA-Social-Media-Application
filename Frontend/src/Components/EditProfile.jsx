@@ -37,7 +37,7 @@ const EditProfile = () => {
 
         try{
             setloader(true);
-            const res = await axios.post('https://luka-social-media-application.onrender.com/api/v1/user/profile/edits',formdata,{headers:{"Content-Type":'multipart/form-data'},withCredentials:true});
+            const res = await axios.post('http://localhost:1000/api/v1/user/profile/edits',formdata,{headers:{"Content-Type":'multipart/form-data'},withCredentials:true});
             if(res.data.success){
                 const updateProfileData = {
                     ...user,
