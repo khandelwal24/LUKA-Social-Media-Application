@@ -121,7 +121,7 @@ export const editProfile = async(req,res)=>{
         return res.status(200).json({message:'Profile Edited Successfully',success:true,user});
     }
     catch(error){
-        console.log('Error Occured Madarchod',error);
+        console.log('Error Occured ',error);
         res.status(401).json({message:'Error Occured',success:false});
     }
 }

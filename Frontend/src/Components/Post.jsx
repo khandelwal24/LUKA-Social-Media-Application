@@ -46,7 +46,7 @@ function Post({post}) {
 
     const deletePostHandler = async(e) =>{
       try{
-        const res = await axios.delete(`https://luka-social-media-application-1.onrender.com/api/v1/posts/delete/${post._id}` , {withCredentials:true})
+        const res = await axios.delete(`http://localhost:1000/api/v1/posts/delete/${post._id}` , {withCredentials:true})
         // console.log(res.data);
         if(res.data.success){
           toast.success(res.data.message);
@@ -87,7 +87,7 @@ function Post({post}) {
 
     const commentHandler = async () =>{
       try{
-       const res = await axios.post(`https://luka-social-media-application-1.onrender.com/api/v1/posts/${post._id}/comment`,{text},{headers:{"Content-Type":'application/json'},withCredentials:true});
+       const res = await axios.post(`http://localhost:1000/api/v1/posts/${post._id}/comment`,{text},{headers:{"Content-Type":'application/json'},withCredentials:true});
        if(res.data.success){
         toast.success(res.data.message);
         const updateCommentData = [...newCommet,res.data.comment]
@@ -105,7 +105,7 @@ function Post({post}) {
 
     const bookmarkHandler = async(postId) =>{
       try{
-        const res = await axios.get(`https://luka-social-media-application-1.onrender.com/api/v1/posts/${postId}/bookmark`,{headers:{"Content-Type":'application/json'}, withCredentials:true});
+        const res = await axios.get(`http://localhost:1000/api/v1/posts/${postId}/bookmark`,{headers:{"Content-Type":'application/json'}, withCredentials:true});
         // console.log(res.data);
         if(res.data.success){
           toast.success(res.data.message);
