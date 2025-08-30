@@ -32,7 +32,7 @@ function ChatPage() {
 
     const sendMessageHandler = async() => {
         try{
-            const res = await axios.post(`http://localhost:1000/api/v1/messages/send/${SelectedUser?._id}`,{textMessage},{headers:{"Content-Type":'application/json'},withCredentials:true});
+            const res = await axios.post(`https://luka-social-media-application-1.onrender.com/api/v1/messages/send/${SelectedUser?._id}`,{textMessage},{headers:{"Content-Type":'application/json'},withCredentials:true});
             if(res.data.success){
                 toast.success(res.data.message);
                 dispatch(setMsgs([...Msgs, res.data.newMessage]))

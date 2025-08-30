@@ -65,7 +65,7 @@ function LeftSidebar() {
     const logOutHandler = async()=>{
 
         try{
-            const res = await axios.get('http://localhost:1000/api/v1/user/logout',{withCredentials:true})
+            const res = await axios.get('https://luka-social-media-application-1.onrender.com/api/v1/user/logout',{withCredentials:true})
             if(res.data?.success){
                 toast.success(res.data?.message);
                 setTimeout(()=>navigate('/Login'),1000);

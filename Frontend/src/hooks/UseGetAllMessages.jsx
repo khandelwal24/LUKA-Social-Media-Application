@@ -13,7 +13,7 @@ const UseGetAllMessages = () => {
         useEffect(()=>{
           const fetchAllMessages = async() => {
               try{
-                  const res = await axios.get(`http://localhost:1000/api/v1/messages/all/${SelectedUser?._id}`,{headers:{"Content-Type":'application/json'},withCredentials:true});
+                  const res = await axios.get(`https://luka-social-media-application-1.onrender.com/api/v1/messages/all/${SelectedUser?._id}`,{headers:{"Content-Type":'application/json'},withCredentials:true});
                   if(res.data.success){
                     toast.success(res.data.message);
                     dispatch(setMsgs(res.data.convo));
