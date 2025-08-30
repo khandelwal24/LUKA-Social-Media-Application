@@ -28,13 +28,12 @@ app.use('/api/v1/posts',postRoute);
 app.use('/api/v1/messages',messageRoute);
 
 // Deployment part...
-/*
+
 const _dirname = path.resolve();
 app.use(express.static(path.join(_dirname,'/Frontend/dist')));
 app.get('*',(_,res)=>{
        res.sendFile(path.resolve(_dirname,'Frontend','dist','index.html'))
 })
-*/
 
 mongoose.connect(process.env.MongoUrl,{dbName:'Insta_Clone'}).then(()=>console.log('MongoDB connected')).catch(()=>console.log('Errro Occured'));
 
